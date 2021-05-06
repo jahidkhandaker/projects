@@ -1,0 +1,512 @@
+{
+	"info": {
+		"_postman_id": "7719bfbd-9db6-4173-8c10-d6ad7d8c35f7",
+		"name": "work_manager",
+		"description": "All the API of project management system are here",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "POST /api/users/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"jahid123950@gmail.com\",\r\n    \"password\": \"7410\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /api/users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Get All Users"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /api/users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Nadira\",\r\n    \"lastName\": \"Akter\",\r\n    \"employeeId\": \"2809\",\r\n    \"gender\": \"Feale\",\r\n    \"picture\": \"/images/jahidK.jpg\",\r\n    \"mobile\": \"01676123950\",\r\n    \"designation\": \"Jr Executive\",\r\n    \"department\" : \"Soft Dev\",\r\n    \"teamName\": \"wev development\",\r\n    \"userRole\": \"developer\",\r\n    \"email\": \"nadira@gmail.com\",\r\n    \"password\": \"7410\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Register User"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /api/users/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jahid\",\r\n    \"lastName\": \"Khandaker\",\r\n    \"employeeId\": \"2804\",\r\n    \"gender\": \"Male\",\r\n    \"picture\": \"/images/jahidK.jpg\",\r\n    \"mobile\": \"01676123950\",\r\n    \"designation\": \"Jr Executive\",\r\n    \"department\" : \"Soft Dev\",\r\n    \"teamName\": \"wev development\",\r\n    \"userRole\": \"developer\",\r\n    \"email\": \"jahid123950@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6049f8a8c2d7733cd48cc6e4"
+								}
+							]
+						},
+						"description": "Register User"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /api/users/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/users/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /api/users/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/users/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6049f8a8c2d7733cd48cc6e4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Users APIs are here"
+		},
+		{
+			"name": "teams",
+			"item": [
+				{
+					"name": "GET /api/teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/teams",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /api/teams",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teamName\": \"Ar/Vr Team\",\r\n    \"department\": \"Soft Dev\",\r\n    \"teamLeader\": \"Chandan\",\r\n    \"teamProjectManager\": \"Emdad Hossain\",\r\n    \"teamMembers\":[\r\n        {\r\n            \"memberName\": \"Chandan\"\r\n        },\r\n        {\r\n            \"memberName\": \"Sakib\"\r\n        },\r\n        {\r\n            \"memberName\": \"Tanzim\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/teams",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /api/teams/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/teams/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"teams",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60584226ba97651708709e92"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /api/teams/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/teams/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"teams",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60584226ba97651708709e92"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Team APIs are here"
+		},
+		{
+			"name": "projects",
+			"item": [
+				{
+					"name": "POST /api/projects",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"projectName\":\"Sneho.com\",\r\n    \"description\":\"demo projects\",\r\n    \"projectSpec\":\"uploads/spec001.pdf\",\r\n    \"estDuration\":\"150\",\r\n    \"projectDeadline\":\"2021-03-29\",\r\n    \"assignedDepartment\":\"softdev\",\r\n    \"assignedTeam\":\"ar/vr\",\r\n    \"ProjectManager\":\"Emdad Hossain\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/projects",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /api/projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/projects",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /api/projects/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/projects/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60584acba7d4df24f0cf4690"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /api/projects/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/projects/:id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"projects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60584a7ea7d4df24f0cf468f"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "GET /api/tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/tasks",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /api/tasks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/tasks",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "uploads",
+			"item": [
+				{
+					"name": "POST /api/upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/upload",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{UserToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL_Local",
+			"value": "http://localhost:5000"
+		},
+		{
+			"key": "URL",
+			"value": "https://sebpoworkmanager.herokuapp.com"
+		},
+		{
+			"key": "UserToken",
+			"value": ""
+		}
+	]
+}
