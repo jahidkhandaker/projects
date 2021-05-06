@@ -1,0 +1,647 @@
+{
+	"info": {
+		"_postman_id": "b7f99f4e-e933-4720-84b2-10b3e6b99cd9",
+		"name": "VMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "officer",
+			"item": [
+				{
+					"name": "Officer Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobile\":\"\",\r\n    \"password\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{VMS_URL}}/api/users/officer/login",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"officer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Officer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"officerName\":\"\",\r\n    \"mobile\":\"\",\r\n    \"nid\":\"\",\r\n    \"password\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{VMS_URL}}/api/users/officer",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"officer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Officers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{VMS_URL}}/api/users/officer",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"officer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Officer By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{VMS_URL}}/api/users/officer/:id/details",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"officer",
+								":id",
+								"details"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6076a0260a0f890015cbd11c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Officers Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{VMS_URL}}/api/users/officerName",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"officerName"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "visitor",
+			"item": [
+				{
+					"name": "Visitor Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobile\":\"\",\r\n    \"password\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{VMS_URL}}/api/users/visitor/login",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"visitor",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Visitor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"visitorName\":\"\",\r\n    \"mobile\":\"\",\r\n    \"fatherName\":\"\",\r\n    \"nid\":\"\",\r\n    \"address\":\"\",\r\n    \"profession\":\"\",\r\n    \"password\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{VMS_URL}}/api/users/visitor",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"visitor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Visitors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{VMS_URL}}/api/users/visitor",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"visitor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Visitors By MobileNo",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{VMS_URL}}/api/users/visitor/:mobile/details",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"visitor",
+								":mobile",
+								"details"
+							],
+							"variable": [
+								{
+									"key": "mobile",
+									"value": "01912251070"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Visitor By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{VMS_URL}}/api/users/visitor/details/:id",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"visitor",
+								"details",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "607955591a52950015d70427"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "appointment",
+			"item": [
+				{
+					"name": "Create Appointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"visitor\":\"\",\r\n    \"officer\":\"\",\r\n    \"date\":\"\",\r\n    \"time\":\"\",\r\n    \"purpose\":\"\",\r\n    \"priority\":\"\",\r\n    \"details\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{VMS_URL}}/api/appointment/create",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Appointments By Mobile No",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{VMS_URL}}/api/appointment/appointmentList?keyword=01912251070",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"appointmentList"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "01912251070"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All AppointmentList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{VMS_URL}}/api/appointment/allappointmentList",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"allappointmentList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sorted Appointment List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{VMS_URL}}/api/appointment/sortList/:status",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"sortList",
+								":status"
+							],
+							"variable": [
+								{
+									"key": "status",
+									"value": "Approved"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Appointment Details By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{VMS_URL}}/api/appointment/details/:id",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"details",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Status To Approved",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{VMS_URL}}/api/appointment/details/:id/approved",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"details",
+								":id",
+								"approved"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Status To Reject",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{VMS_URL}}/api/appointment/details/:id/reject",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"appointment",
+								"details",
+								":id",
+								"reject"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AccessCard",
+			"item": [
+				{
+					"name": "Create Card",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardNo\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{VMS_URL}}/api/accesscard/createCard",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"accesscard",
+								"createCard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assigned Card",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"visitorId\":\"\",\r\n    \"cardNo\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{VMS_URL}}/api/accesscard/assignedCard",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"accesscard",
+								"assignedCard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Card",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardNo\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{VMS_URL}}/api/accesscard/cancelCard",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"accesscard",
+								"cancelCard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET CardList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{VMS_URL}}/api/accesscard/cardList",
+							"host": [
+								"{{VMS_URL}}"
+							],
+							"path": [
+								"api",
+								"accesscard",
+								"cardList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{LoginToken}}",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "{{myToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "VMS_URL",
+			"value": "https://visitormsystem.herokuapp.com"
+		},
+		{
+			"key": "VMS_URL_Local",
+			"value": ""
+		},
+		{
+			"key": "LoginToken",
+			"value": ""
+		}
+	]
+}
